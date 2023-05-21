@@ -1,0 +1,76 @@
+<!-- saved from url=(0051)file:///C:/Users/danie/Downloads/scripty%20(1).html -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>Unit Conversion Machine</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css">
+<style type="text/css" id="operaUserStyle"></style></head>
+<body>
+	<div class="container">
+		<h1 style="background-color:#eb4034; padding: 20px; border-radius: 30px; margin: 10px;"><b>Unit Conversion Machine</b></h1>
+<table style="margin: 10px;">
+	<tbody>
+		<th style="background-color:#1fff0a; padding: 20px; border-radius: 30px;"><p>Select Your Measurement</p>
+			<select class="form-select form-select-lg" aria-label=".form-select-lg example">
+            <option value="index.html" selected>Length</option>
+            <option value="index.html">Width</option>
+            <option value="index.html">Why are you making me put this in teacher it literally does nothing? Thx for everything btw.</option>
+        </select>
+		</th>
+	</tbody>
+</table>
+		<table class="center" style="margin: 10px;">
+	<tbody>
+		<th style="background-color:#eb4034; padding: 20px; border-radius: 30px;">Input Millimeters
+			<p><input type="text" id="userinput" placeholder="Millimeters" style="width: 300px;"></p>
+			<input type="button" id="sec_min_button" onclick="SecMin()" value="Centimeters">
+			<input type="button" id="sec_hr_button" onclick="SecHr()" value="Meters">
+			<input type="button" id="sec_dt_button" onclick="SecDt()" value="Kilometers">
+		</th>
+	</tbody>
+</table>
+<table style="margin: 10px;">
+	<tbody>
+		<th style="background-color:#1fff0a; padding: 20px; border-radius: 30px;">Results
+			<p><input type="text"style="width: 300px;" id="results" readonly></p>
+		</th>
+	</tbody>
+</table>
+</div>
+<script>
+/*1stTable*/
+	function SecMin(){
+		var x, y
+		x = (document.getElementById('userinput').value);
+		y = 10;	
+		var element = document.getElementById('results');
+		element.value = x+" mm in centimeters is "+(x / y)+" cm";
+		element.style.color = "red";
+		var button = document.getElementById('sec_min_button');
+		button.style.color = "red";
+	}
+	function SecHr(){
+		var x, y
+		x = (document.getElementById('userinput').value);
+		y = 1000;	
+		var element = document.getElementById('results');
+		element.value = x+" mm in meters is "+(x / y)+" m";
+		element.style.color = "blue";
+		var button = document.getElementById('sec_hr_button');
+		button.style.color = "blue";
+	}
+
+	function SecDt(){
+		var x, y
+		x = (document.getElementById('userinput').value);
+		y = 1000000;	
+		var element = document.getElementById('results');
+		element.value = x+" mm in kilometers is "+(x / y)+" km";
+		element.style.color = "green";
+		var button = document.getElementById('sec_dt_button');
+		button.style.color = "green";
+	}
+</script>
+</body>
+</html>
